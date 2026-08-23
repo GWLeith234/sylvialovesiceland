@@ -2,6 +2,7 @@
    Tokens from /workspace/sylvialovesiceland/refs/sootoday-notes.md
    Do not copy SooToday logo or Village trademarks. */
 @import url("../fonts/open-sans.css");
+@import url("../fonts/bebas-neue.css");
 
 :root {
   /* Village blue #1665a8 retired from this mockup — Northern Lights tokens only */
@@ -10,7 +11,8 @@
   --aurora-deep: #127a5b;
   --aurora-violet: #2a1f4a;
   --aurora-hover: #0e6b5c;
-  --brand-bar: linear-gradient(90deg, #061820 0%, #0a3d38 42%, #127a5b 78%, #2a1f4a 100%);
+  --flora-navy: #062341;
+  --brand-bar: #061820;
   --yellow: #f2cd00;
   --yellow-2: #fed204;
   --yellow-panel: #fefae5;
@@ -22,10 +24,11 @@
   --rule: #cccccc;
   --crimson: #a30b37;
   --footer: #0b1a1c; /* was Village #302b27 */
-  --hd-blue: 60px;
+  --hd-blue: 92px;
   --hd-nav: 51px;
-  --hd: 111px;
+  --hd: 143px;
   --page: 990px;
+  --hd-inner: 1280px;
   --col: 300px;
   --gutter: 30px;
 }
@@ -50,6 +53,10 @@ button { font: inherit; cursor: pointer; }
   max-width: calc(100% - 24px);
   margin: 0 auto;
 }
+.hd-bar .inner,
+.hd-nav .inner {
+  width: var(--hd-inner);
+}
 
 /* ——— Sticky header: aurora brand bar + white nav ——— */
 .site-hd {
@@ -59,40 +66,40 @@ button { font: inherit; cursor: pointer; }
   height: var(--hd);
 }
 .hd-bar {
-  background: var(--brand-bar);
+  background: var(--night) center / cover no-repeat;
+  background-image: url("../img/aurora-masthead.jpg");
   height: var(--hd-blue);
   color: #fff;
+  position: relative;
+}
+.hd-bar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(6,24,32,.72) 0%, rgba(6,35,65,.58) 46%, rgba(6,24,32,.68) 100%);
 }
 .hd-bar .inner {
   display: flex;
   align-items: center;
   height: 100%;
   gap: 16px;
+  position: relative;
+  z-index: 1;
 }
 .wordmark {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   color: #fff;
-  font-weight: 800;
-  font-size: 22px;
-  letter-spacing: -0.03em;
+  font-family: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  letter-spacing: 0.04em;
+  line-height: 1;
   text-decoration: none;
   white-space: nowrap;
+  text-transform: none;
 }
 .wordmark:hover { color: #fff; }
-.wm-pill {
-  display: inline-block;
-  background: linear-gradient(180deg, #c8f7ea 0%, var(--aurora) 62%, #8ee8d0 100%);
-  color: var(--night);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  line-height: 1;
-  padding: 3px 6px 4px;
-  border-radius: 999px;
-}
 .hd-right {
   margin-left: auto;
   display: flex;
@@ -207,8 +214,11 @@ button { font: inherit; cursor: pointer; }
 .takeover-heli .takeover-bg {
   background-image: url("../img/reykjavik-from-hallgrimskirkja.jpg");
 }
-.takeover-eyja .takeover-bg {
-  background-image: url("../img/hallgrimskirkja.jpg");
+.takeover-flora .takeover-bg {
+  background-image: url("../img/flora-lobby.jpg");
+}
+.takeover-flora201 .takeover-bg {
+  background-image: url("../img/flora-reception.jpg");
 }
 .takeover-hit {
   position: fixed;
@@ -494,6 +504,25 @@ h3 { font-size: 16.4px; line-height: 1.25; }
   font-weight: 700;
   font-size: 13px;
 }
+.ad-flora {
+  border-color: var(--flora-navy);
+  background: var(--flora-navy);
+}
+.ad-flora .ad-copy {
+  background: linear-gradient(transparent, rgba(6, 35, 65, .88));
+  padding-right: 78px;
+}
+.ad-lockup {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 64px !important;
+  height: 64px !important;
+  object-fit: contain !important;
+  z-index: 1;
+  box-shadow: 0 2px 10px rgba(0,0,0,.35);
+}
+.ad-flora201 .ad-lockup { width: 56px !important; height: 56px !important; }
 .ad-lb-slot {
   position: relative;
   z-index: 3;
@@ -524,6 +553,7 @@ h3 { font-size: 16.4px; line-height: 1.25; }
   padding: 6px 10px 8px;
 }
 .ad-foot img { height: 70px; }
+.ad-foot .ad-lockup { width: 44px !important; height: 44px !important; bottom: 4px; }
 
 /* Footer */
 .site-ft {
@@ -651,7 +681,7 @@ h3 { font-size: 16.4px; line-height: 1.25; }
   .takeover-mark { display: none; }
 }
 @media (max-width: 990px) {
-  :root { --hd: 111px; }
+  :root { --hd: 143px; }
   body { padding-top: var(--hd); }
   .inner, .sheet { width: 100%; }
   .grid-3, .article-grid { grid-template-columns: 1fr; width: 100%; }
@@ -665,6 +695,7 @@ h3 { font-size: 16.4px; line-height: 1.25; }
   .ad-foot { display: block; }
   body { padding-bottom: 92px; }
   .ask span { display: none; }
+  .wordmark { font-size: 28px; letter-spacing: 0.03em; }
   .hd-nav .inner { gap: 10px; overflow-x: auto; }
   .latest img { width: 100%; height: 200px; }
   .tour { grid-template-columns: 1fr; padding-bottom: 12px; }

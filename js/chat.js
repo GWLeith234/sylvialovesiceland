@@ -1,5 +1,29 @@
 (function () {
   var FACE = "sylvia.jpg";
+  var WIDGET_ID = "df50fe75-9f19-11f1-b1e3-42c104493bd3";
+
+  function hasVendastaWidget() {
+    return !!(
+      document.querySelector('script[src*="webchat-client"]') ||
+      document.querySelector('script[data-widget-id="' + WIDGET_ID + '"]')
+    );
+  }
+
+  function openVendasta() {
+    if (window.webchatAPI && typeof window.webchatAPI.fillMessage === "function") {
+      window.webchatAPI.fillMessage("", WIDGET_ID);
+      return;
+    }
+    var hash = "#webchat-fill-message?webchat-widgetId=" + encodeURIComponent(WIDGET_ID);
+    if (location.hash === hash) {
+      location.hash = "";
+    }
+    location.hash = hash;
+  }
+
+  window.SLI = window.SLI || {};
+  window.SLI.openChat = openVendasta;
+  window.SLI.closeChat = function () {};
 
   function el(html) {
     var d = document.createElement("div");
@@ -8,6 +32,7 @@
   }
 
   function mount() {
+    if (hasVendastaWidget()) return;
     if (document.getElementById("sli-root")) return;
     var src = window.SLI || { is201: false, label: "Found online" };
     var chipClass = src.is201 ? "sli-chip partner" : "sli-chip";
@@ -48,7 +73,6 @@
     });
 
     if (!sessionStorage.getItem("sli_greeted")) greet();
-    else if (window.SLI._restored) restore();
     else greet();
   }
 
@@ -61,9 +85,11 @@
     document.getElementById("sli-panel").classList.remove("open");
     document.getElementById("sli-launcher").style.display = "flex";
   }
-  window.SLI = window.SLI || {};
-  window.SLI.openChat = open;
-  window.SLI.closeChat = close;
+
+  if (!hasVendastaWidget()) {
+    window.SLI.openChat = open;
+    window.SLI.closeChat = close;
+  }
 
   function msgs() { return document.getElementById("sli-msgs"); }
   function replies() { return document.getElementById("sli-replies"); }
@@ -151,31 +177,17 @@
     setReplies([]);
   }
 
-  function offerEyja() {
-    addSylvia(
-      "Eyja scooters are a city-day — Reykjavík at street level. They are <strong>not on TourDesk yet</strong> (pending operator onboarding). I will not invent a TourDesk item for them." +
-      "<br><br>The bookable buy from this desk is the <strong>Norðurflug Reykjavik Summit Helicopter Tour</strong>." +
-      '<br><a class="td-link" href="checkout-eyja.html">Eyja stand-in<small>Not TourDesk · checkout pending onboarding</small></a>'
-    );
-    setReplies([{ label: "Reykjavík from the air tomorrow" }]);
-  }
-
   function onGuest(text) {
     addMe(text);
     var t = text.toLowerCase();
     var wants = /heli|summit|air|nordur|norður|norðurflug|tomorrow|flight|fly|airport/.test(t);
-    var eyja = /eyja|scooter|scoot/.test(t);
     var reyk = /reykjav|capital|not sure|don't know|dont know|unknown/.test(t);
     var north = /húsav|husav|akureyri|north/.test(t);
-    var oldboats = /puffin|whale|boat|harbour|harbor/.test(t);
+    var stay = /hotel|201|flóra|flora|stay|room/.test(t);
 
-    if (eyja) {
-      offerEyja();
-      return;
-    }
-    if (oldboats && !wants) {
+    if (stay && !wants) {
       addSylvia(
-        "I don’t book harbour puffin or whale boats on this desk. From Reykjavík tomorrow, the bookable buy is a <strong>Norðurflug Summit helicopter</strong>. Húsavík is still five hours if you were thinking of the north."
+        "A great stay in Iceland starts at 201 Hotel. Comfort, simplicity, and great value in Kópavogur — just minutes from Reykjavík. Flóra: 5 Hotels. One Collection. Hospitality, rooted in Iceland."
       );
       setReplies([{ label: "Reykjavík from the air tomorrow" }]);
       return;

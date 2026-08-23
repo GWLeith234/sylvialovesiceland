@@ -10,6 +10,8 @@
   var SRC_LABEL = "201 Hotel / Flora lobby";
   var CLOSER_LABEL = "Sylvia";
   var LIVE_ITEM = "https://201hotel.tourdesk.is/Tour/Item/1391/1/reykjavik-summit-helicopter-tour";
+  var FLORA_URL = "https://www.floracollection.is/";
+  var FLORA201_URL = "https://201hotel.is/";
 
   var file = (location.pathname.split("/").pop() || "index.html");
   var params = new URLSearchParams(location.search);
@@ -104,7 +106,16 @@
   document.querySelectorAll("[data-ad]").forEach(function (a) {
     var kind = a.getAttribute("data-ad");
     if (kind === "heli") a.setAttribute("href", checkoutHref());
-    if (kind === "eyja") a.setAttribute("href", "checkout-eyja.html");
+    if (kind === "flora") {
+      a.setAttribute("href", FLORA_URL);
+      a.setAttribute("target", "_blank");
+      a.setAttribute("rel", "noopener");
+    }
+    if (kind === "flora201") {
+      a.setAttribute("href", FLORA201_URL);
+      a.setAttribute("target", "_blank");
+      a.setAttribute("rel", "noopener");
+    }
   });
 
   document.querySelectorAll('a[href^="checkout-201.html"]').forEach(function (a) {

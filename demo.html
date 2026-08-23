@@ -16,7 +16,23 @@
       text-align: center;
       box-shadow: 0 8px 28px rgba(0,0,0,.12);
     }
-    .poster .bar { background: #1665a8; color: #fff; padding: 14px 16px; font-weight: 800; letter-spacing: -0.02em; }
+    .poster .bar {
+      background: #062341 url("img/aurora-masthead.jpg") center / cover no-repeat;
+      color: #fff;
+      padding: 18px 16px;
+      font-family: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+      font-weight: 400;
+      font-size: 28px;
+      letter-spacing: 0.04em;
+      position: relative;
+    }
+    .poster .bar::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(6, 35, 65, .62);
+    }
+    .poster .bar span { position: relative; z-index: 1; }
     .hotel { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6f6f6f; margin: 18px 24px 0; }
     .poster h1 { font-size: 26px; margin: 10px 24px 8px; }
     .poster p { color: #333; margin: 0 24px; }
@@ -33,7 +49,7 @@
   <div class="poster-stage">
     <div>
       <a class="poster" href="201.html?src=201&src_name=201-hotel-flora&closer=sylvia" style="text-decoration:none;color:inherit;display:block;">
-        <div class="bar">Sylvialovesiceland</div>
+        <div class="bar"><span>sylvialovesiceland.com</span></div>
         <div class="hotel">201 Hotel · Hlíðarsmári 5 · Kópavogur</div>
         <img class="face" src="sylvia.jpg" alt="Sylvia">
         <h1>Ask Sylvia about Iceland</h1>
