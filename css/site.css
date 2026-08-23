@@ -149,23 +149,25 @@ button { font: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   height: 100%;
-  gap: 16px;
-  font-size: 13px;
+  gap: 9px;
+  font-size: 11.5px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
-.hd-nav a, .hd-nav span { color: var(--ink); }
+.hd-nav a, .hd-nav span { color: var(--ink); white-space: nowrap; }
 .hd-nav a.on, .hd-nav a:hover { color: var(--aurora-deep); }
 .hd-nav a.on { box-shadow: inset 0 -2px 0 var(--aurora); }
 .hd-nav span { color: #999; cursor: default; }
+.hd-nav a[href$="#book"] { color: var(--ink); }
 .nav-tools {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-transform: none;
   font-weight: 400;
+  letter-spacing: 0;
   color: var(--muted);
 }
 .hd-search {
@@ -174,8 +176,66 @@ button { font: inherit; cursor: pointer; }
   color: var(--ink);
   font-size: 16px;
 }
-.hd-wx { font-size: 13px; color: var(--muted); white-space: nowrap; }
+a.hd-wx,
+.hd-wx {
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+a.hd-wx:hover { color: var(--aurora-hover); }
 .heart { color: var(--yellow); font-size: 16px; }
+.wx-now {
+  border: 1px solid var(--line);
+  background: #eef8f4;
+  padding: 12px 14px;
+  margin: 0 0 16px;
+}
+.wx-now .wx-name {
+  font-weight: 800;
+  font-size: 15px;
+  margin: 0 0 2px;
+  color: var(--ink);
+}
+.wx-now .wx-temp {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+.wx-now .wx-attr,
+.wx-now .wx-attr a {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.wx-now p { margin: 0 0 8px; }
+.regions-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+.regions-list a {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+  font-weight: 700;
+}
+.regions-list a:hover { color: inherit; }
+.regions-list a:hover strong { color: var(--aurora); }
+.regions-list small {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 12px;
+}
 
 /* Partner bar */
 .partner-bar {
