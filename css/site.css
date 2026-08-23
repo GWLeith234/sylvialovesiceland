@@ -76,7 +76,7 @@ button { font: inherit; cursor: pointer; }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(6,24,32,.72) 0%, rgba(6,35,65,.58) 46%, rgba(6,24,32,.68) 100%);
+  background: linear-gradient(90deg, rgba(6,24,32,.42) 0%, rgba(6,35,65,.28) 48%, rgba(6,24,32,.40) 100%);
 }
 .hd-bar .inner {
   display: flex;
@@ -507,6 +507,9 @@ h3 { font-size: 16.4px; line-height: 1.25; }
 .ad-flora {
   border-color: var(--flora-navy);
   background: var(--flora-navy);
+}
+.ad-flora .ad-lbl {
+  color: #c5d0dc;
 }
 .ad-flora .ad-copy {
   background: linear-gradient(transparent, rgba(6, 35, 65, .88));
