@@ -1,0 +1,100 @@
+/* local latin faces — Sylvialovesiceland mockup */
+
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(Newsreader-italic-400.woff2) format('woff2');
+}
+
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(Newsreader-italic-500.woff2) format('woff2');
+}
+
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(Newsreader-normal-400.woff2) format('woff2');
+}
+
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(Newsreader-normal-500.woff2) format('woff2');
+}
+
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(Newsreader-normal-600.woff2) format('woff2');
+}
+
+/* latin */
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(Newsreader-normal-700.woff2) format('woff2');
+}
+
+/* latin */
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(SourceSans3-italic-400.woff2) format('woff2');
+}
+
+/* latin */
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(SourceSans3-normal-400.woff2) format('woff2');
+}
+
+/* latin */
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(SourceSans3-normal-500.woff2) format('woff2');
+}
+
+/* latin */
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(SourceSans3-normal-600.woff2) format('woff2');
+}
+
+/* latin */
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(SourceSans3-normal-700.woff2) format('woff2');
+}
