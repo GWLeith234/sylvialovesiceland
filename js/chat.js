@@ -122,15 +122,14 @@
   function evxLink() {
     return (
       '<a class="td-link" href="checkout-evx.html">' +
-        "Open Reykjavik Summit Helicopter Tour on TourDesk · EVX reseller portal" +
-        "<small>[EVX reseller portal] · same Norðurflug product · not the 201 Hotel portal</small>" +
+        "Open Reykjavik Summit Helicopter Tour on TourDesk" +
+        "<small>same Norðurflug product</small>" +
       "</a>"
     );
   }
   function hotelLink() {
     var href = (window.SLI && window.SLI.checkoutHref) ? window.SLI.checkoutHref() : "checkout-201.html";
-    var qs = (window.SLI && window.SLI.trackQS) ? window.SLI.trackQS() : "";
-    var live = ((window.SLI && window.SLI.liveItem) ? window.SLI.liveItem : "https://201hotel.tourdesk.is/Tour/Item/1391/1/reykjavik-summit-helicopter-tour") + qs;
+    var live = (window.SLI && window.SLI.liveItem) ? window.SLI.liveItem : "https://201hotel.tourdesk.is/Tour/Item/1391/1/reykjavik-summit-helicopter-tour";
     return (
       '<a class="td-link" href="' + href + '">' +
         "Open on 201 TourDesk" +
@@ -160,7 +159,7 @@
     addSylvia(
       "Húsavík is the postcard — and it is about <strong>five hours each way</strong> from Reykjavík (~480 km). From where you are, stay in the capital." +
       "<br><br><strong>Reykjavik Summit Helicopter Tour</strong> with Norðurflug leaves the domestic airport heliport. Capital Region. About 40 minutes. Flying." +
-      "<br><br>I do not take the card. Checkout is on TourDesk, on <strong>EvolveX360’s own reseller portal</strong>." +
+      "<br><br>I do not take the card. Checkout is on TourDesk." +
       evxLink()
     );
     setReplies([]);
@@ -170,7 +169,7 @@
     step = "offer";
     addSylvia(
       "You are at 201 Hotel in Kópavogur. Reykjavík domestic airport heliport is a short hop. Húsavík is still five hours — I will not sell that as a day trip from this hotel." +
-      "<br><br><strong>Reykjavik Summit Helicopter Tour</strong> — Norðurflug, vendor 64 on the 201 portal. About 40 minutes. Checkout stays on the <strong>201 Hotel TourDesk portal</strong>. I will not send this tagged visit to the EVX reseller portal." +
+      "<br><br><strong>Reykjavik Summit Helicopter Tour</strong> — Norðurflug, vendor 64. About 40 minutes. Checkout is on TourDesk." +
       hotelLink()
     );
     setReplies([]);
