@@ -652,9 +652,13 @@ h3 { font-size: 16.4px; line-height: 1.25; }
   justify-content: space-between;
   align-items: flex-end;
   gap: 20px;
+  flex-wrap: wrap;
 }
 .site-ft strong { font-size: 15px; }
 .site-ft p { margin: 4px 0 0; color: #ddd; }
+.site-ft .pay { display: flex; flex-direction: column; gap: 6px; }
+.site-ft .pay span { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #9a9590; }
+.site-ft .pay img { display: block; height: 28px; width: auto; max-width: 100%; background: #fff; padding: 4px 6px; }
 .preview { font-size: 11px; color: #9a9590; }
 .preview a { color: #b8b3ae; border-bottom: 1px dotted #6a6560; }
 .preview a.on { color: #fff; border-bottom-color: var(--yellow); }
