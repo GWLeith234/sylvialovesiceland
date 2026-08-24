@@ -280,6 +280,9 @@ a.hd-wx:hover { color: var(--aurora-hover); }
 .takeover-flora201 .takeover-bg {
   background-image: url("../img/flora-reception.jpg");
 }
+.takeover-nordurflug .takeover-bg { background-image: url("../img/heli-hero.jpg"); background-color:#061820; }
+.takeover-evx { background:#040404; }
+.takeover-evx .takeover-bg { background-image: url("../img/evx-ad-hero.jpg"); background-color:#040404; }
 .takeover-hit {
   position: fixed;
   top: var(--hd);
