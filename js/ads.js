@@ -12,10 +12,10 @@
     box: "Reykjavik Summit"
   };
   var EVX_COPY = {
-    takeover: "ICELAND → NORTH AMERICA · Your next customer lives in New York. Or Toronto.",
-    wide: "YOUR NEXT CUSTOMER LIVES IN NEW YORK. OR TORONTO.",
-    half: "Your AI Digital Go To Market Agency",
-    box: "Your AI Digital Go To Market Agency"
+    takeover: "Our AI workforce avatars. Get them working for your business today.",
+    wide: "They speak 40 languages, and never take a minute off.",
+    half: "Our AI workforce avatars. Get them working for your business today.",
+    box: "They speak 40 languages, and never take a minute off."
   };
   var HELI_IMG = {
     takeover: "img/heli-hero.jpg",
@@ -27,8 +27,8 @@
   var EVX_IMG = {
     takeover: "img/evx-ad-hero.jpg",
     wide: "img/evx-ad-wide.jpg",
-    half: "img/evx-ad-logo-half.jpg?v=circle",
-    box: "img/evx-ad-logo.jpg?v=circle",
+    half: "img/evx-ad-logo-half.jpg?v=workforce",
+    box: "img/evx-ad-logo.jpg?v=workforce",
     logo: "img/evx-logo.png"
   };
 
@@ -212,7 +212,7 @@
       hideCopy: small,
       brand: "EvolveX360 Iceland",
       bg: EVX_IMG.takeover,
-      marks: markPair("ICELAND → NORTH AMERICA", "Your next customer lives in New York. Or Toronto.")
+      marks: markPair("Our AI workforce avatars.", "Get them working for your business today.")
     };
   }
 
