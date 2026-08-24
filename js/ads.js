@@ -27,8 +27,8 @@
   var EVX_IMG = {
     takeover: "img/evx-ad-hero.jpg",
     wide: "img/evx-ad-wide.jpg",
-    half: "img/evx-ad-logo-half.jpg",
-    box: "img/evx-ad-logo.jpg",
+    half: "img/evx-ad-logo-half.jpg?v=circle",
+    box: "img/evx-ad-logo.jpg?v=circle",
     logo: "img/evx-logo.png"
   };
 

@@ -607,6 +607,11 @@ h3 { font-size: 16.4px; line-height: 1.25; }
 .ad-half img { width: 300px; height: 600px; object-fit: cover; }
 .ad-box { width: 300px; }
 .ad-box img { width: 300px; height: 250px; object-fit: cover; }
+.ad-evx.ad-half img:not(.ad-lockup),
+.ad-evx.ad-box img:not(.ad-lockup) {
+  object-fit: contain;
+  background: #040404;
+}
 .ad-infeed { margin: 12px 0; }
 .ad-skin-mobile { display: none; }
 .ad-foot {
