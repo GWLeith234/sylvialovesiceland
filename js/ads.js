@@ -14,8 +14,8 @@
   var EVX_COPY = {
     takeover: "ICELAND → NORTH AMERICA · Your next customer lives in New York. Or Toronto.",
     wide: "YOUR NEXT CUSTOMER LIVES IN NEW YORK. OR TORONTO.",
-    half: "YOUR ICELAND GROWTH PARTNER",
-    box: "NOT AN AGENCY. A GROWTH SYSTEM."
+    half: "Your AI Digital Go To Market Agency",
+    box: "Your AI Digital Go To Market Agency"
   };
   var HELI_IMG = {
     takeover: "img/heli-hero.jpg",
@@ -27,8 +27,8 @@
   var EVX_IMG = {
     takeover: "img/evx-ad-hero.jpg",
     wide: "img/evx-ad-wide.jpg",
-    half: "img/evx-gilsi.jpg",
-    box: "img/evx-ad-box.jpg",
+    half: "img/evx-ad-logo-half.jpg",
+    box: "img/evx-ad-logo.jpg",
     logo: "img/evx-logo.png"
   };
 
@@ -143,9 +143,13 @@
     var img = mainImg(el);
     if (img && imgSrc) img.src = imgSrc;
     var lock = el.querySelector("img.ad-lockup");
-    if (lock && logoSrc) {
+    if (!lock) return;
+    if (logoSrc) {
+      lock.style.display = "";
       lock.src = logoSrc;
       if (brand) lock.alt = brand;
+    } else {
+      lock.style.display = "none";
     }
   }
 
@@ -191,12 +195,13 @@
   }
 
   function evxCreative(shape) {
+    var small = shape === "half" || shape === "box";
     return {
       kind: "evx",
       href: EVX_URL,
       line: EVX_COPY[shape] || EVX_COPY.wide,
       img: EVX_IMG[shape] || EVX_IMG.wide,
-      logo: EVX_IMG.logo,
+      logo: small ? "" : EVX_IMG.logo,
       brand: "EvolveX360 Iceland",
       bg: EVX_IMG.takeover,
       marks: markPair("ICELAND → NORTH AMERICA", "Your next customer lives in New York. Or Toronto.")
