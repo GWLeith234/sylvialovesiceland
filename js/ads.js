@@ -12,10 +12,10 @@
     box: "Reykjavik Summit"
   };
   var EVX_COPY = {
-    takeover: "Icelandic businesses. We open the North American market.",
-    wide: "Icelandic businesses. We open the North American market.",
-    half: "Gilsi · CEO, EvolveX360 Iceland.",
-    box: "North America, from Iceland."
+    takeover: "ICELAND → NORTH AMERICA · Your next customer lives in New York. Or Toronto.",
+    wide: "YOUR NEXT CUSTOMER LIVES IN NEW YORK. OR TORONTO.",
+    half: "YOUR ICELAND GROWTH PARTNER",
+    box: "NOT AN AGENCY. A GROWTH SYSTEM."
   };
   var HELI_IMG = {
     takeover: "img/heli-hero.jpg",
@@ -199,7 +199,7 @@
       logo: EVX_IMG.logo,
       brand: "EvolveX360 Iceland",
       bg: EVX_IMG.takeover,
-      marks: markPair("Icelandic businesses.", "We open the North American market.")
+      marks: markPair("ICELAND → NORTH AMERICA", "Your next customer lives in New York. Or Toronto.")
     };
   }
 
