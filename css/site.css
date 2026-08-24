@@ -645,20 +645,25 @@ h3 { font-size: 16.4px; line-height: 1.25; }
 }
 .lock p { margin: 0; font-size: 14px; }
 .roads-mod,
-.events-mod {
+.events-mod,
+.info-mod {
   border: 1px solid var(--line);
   background: #eef8f4;
   padding: 12px 14px;
   margin-top: 12px;
 }
 .roads-mod h3,
-.events-mod h3 { font-size: 16.4px; margin: 0 0 4px; }
+.events-mod h3,
+.info-mod h3 { font-size: 16.4px; margin: 0 0 4px; }
 .roads-mod p,
-.events-mod p { margin: 0 0 6px; font-size: 14px; color: var(--muted); }
+.events-mod p,
+.info-mod p { margin: 0 0 6px; font-size: 14px; color: var(--muted); }
 .roads-mod p:last-child,
-.events-mod p:last-child { margin-bottom: 0; }
+.events-mod p:last-child,
+.info-mod p:last-child { margin-bottom: 0; }
 .roads-mod a,
-.events-mod a { color: var(--aurora); font-weight: 700; }
+.events-mod a,
+.info-mod a { color: var(--aurora); font-weight: 700; }
 .events-mod .just { margin-top: 8px; }
 .roads-source { font-weight: 700; }
 .roads-frame {
@@ -856,6 +861,8 @@ h3 { font-size: 16.4px; line-height: 1.25; }
 }
 .site-ft strong { font-size: 15px; }
 .site-ft p { margin: 4px 0 0; color: #ddd; }
+.site-ft .ft-info a { color: #c8f0e4; }
+.site-ft .ft-info a:hover { color: #fff; }
 .site-ft .pay { display: flex; flex-direction: column; gap: 6px; }
 .site-ft .pay span { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #9a9590; }
 .site-ft .pay img { display: block; height: 28px; width: auto; max-width: 100%; background: #fff; padding: 4px 6px; }
