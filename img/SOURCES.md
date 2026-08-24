@@ -16,3 +16,7 @@ Zone banners used on the seven Visit Iceland region pages and the home map cards
 - `banner-north.jpg` — Húsavík harbour. Steven Lek, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). [File:Húsavík harbour 2019.jpg](https://commons.wikimedia.org/wiki/File:H%C3%BAsav%C3%ADk_harbour_2019.jpg)
 
 The home map SVG is an original drawing for IcelandNOW. It is not Visit Iceland artwork.
+
+## Official operator photo
+
+- `blue-lagoon.jpg` — aerial of the Blue Lagoon on the Reykjanes Peninsula (milky-blue water, lava field, steam). Downloaded from Blue Lagoon’s Contentful CDN (`DJI_0348__6_.jpg`) and resized to 2000px wide. Credit: Blue Lagoon.

@@ -643,6 +643,7 @@ h3 { font-size: 16.4px; line-height: 1.25; }
   padding: 12px 14px;
   margin: 16px 0;
 }
+.lock-photo img { width: 100%; height: 220px; object-fit: cover; display: block; margin: 0 0 12px; }
 .lock p { margin: 0; font-size: 14px; }
 .roads-mod,
 .events-mod,
