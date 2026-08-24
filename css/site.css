@@ -718,6 +718,64 @@ h3 { font-size: 16.4px; line-height: 1.25; }
   padding: 14px;
   background: #fff;
 }
+.rail-box.ask-card {
+  padding: 0 0 16px;
+  background: #002030;
+  border-color: #001020;
+  color: #fff;
+  overflow: hidden;
+}
+.rail-box.ask-card .ask-brand {
+  margin: 0;
+  padding: 12px 16px 0;
+  font-family: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  color: #fff;
+  line-height: 1;
+}
+.rail-box.ask-card .face {
+  display: block;
+  width: 112px;
+  height: 112px;
+  margin: 16px auto 12px;
+  border: 3px solid #fff;
+  box-shadow: 0 8px 22px rgba(0,0,0,.35);
+}
+.rail-box.ask-card h3 {
+  margin: 0 16px 4px;
+  color: #fff;
+  font-size: 26px;
+  line-height: 1.15;
+  text-align: center;
+}
+.rail-box.ask-card .ask-role {
+  margin: 0 16px 12px;
+  text-align: center;
+  color: #c8d8e4;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.rail-box.ask-card p {
+  margin: 0 16px 14px;
+  color: #d6e2ea;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.rail-box.ask-card .ask-cta {
+  display: block;
+  margin: 0 16px;
+  padding: 14px 16px;
+  background: #fff;
+  color: #002030;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.rail-box.ask-card .ask-cta:hover { background: #e8eef2; color: #001020; }
 .rail img.face {
   width: 64px; height: 64px; border-radius: 50%;
   object-fit: cover; margin-bottom: 8px;
