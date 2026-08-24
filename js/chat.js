@@ -52,7 +52,6 @@
           "</div>" +
           '<div class="sli-msgs" id="sli-msgs"></div>' +
           '<div class="sli-replies" id="sli-replies"></div>' +
-          '<div class="sli-note">Link only. Checkout stays on TourDesk. No card in this chat.</div>' +
           '<form class="sli-input" id="sli-form">' +
             '<input name="q" autocomplete="off" placeholder="Ask about tomorrow…">' +
             "<button type=\"submit\">Send</button>" +
