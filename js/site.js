@@ -74,10 +74,7 @@
   }
 
   function codesText() {
-    if (source === "201") {
-      return "source: " + SRC_LABEL + " · closer: " + closerLabel();
-    }
-    return "EVX portal · no location code · EVX keeps commission";
+    return "";
   }
 
   window.SLI = {
@@ -122,24 +119,15 @@
     a.setAttribute("href", source === "201" ? "checkout-201.html" + trackQS() : "checkout-201.html");
   });
 
-  document.querySelectorAll("[data-sli-codes]").forEach(function (el) {
-    el.textContent = codesText();
-  });
-
   if (file === "checkout-201.html") {
-    var t = trackParams() || { src: DEFAULT_SRC, src_name: DEFAULT_SRC_NAME, closer: DEFAULT_CLOSER };
     var live = LIVE_ITEM + trackQS();
     var urlEl = document.querySelector(".td-url");
-    if (urlEl) urlEl.textContent = live;
+    if (urlEl) urlEl.textContent = LIVE_ITEM;
     var liveA = document.getElementById("sli-live");
     if (liveA) {
       liveA.setAttribute("href", live);
-      liveA.textContent = live;
+      liveA.textContent = LIVE_ITEM;
     }
-    var raw = document.getElementById("sli-track-raw");
-    if (raw) raw.textContent = "src=" + t.src + " · src_name=" + t.src_name + " · closer=" + t.closer;
-    var human = document.getElementById("sli-track-human");
-    if (human) human.textContent = codesText();
   }
 
   document.addEventListener("click", function (e) {
