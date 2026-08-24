@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Látrabjarg had Iceland’s longest totality; those one-way roads were a one-day plan — Sylvialovesiceland</title>
+  <title>Road conditions — IcelandNOW.com — Sylvialovesiceland</title>
   <link rel="stylesheet" href="css/site.css">
 <script
   src="https://cdn.apigateway.co/webchat-client..prod/sdk.js"
@@ -41,10 +41,10 @@
         <a href="index.html">News</a>
         <a href="events.html">Events</a>
         <a href="practical.html">Info</a>
-        <a href="roads.html">Roads</a>
+        <a href="roads.html" class="on">Roads</a>
         <a href="region-reykjavik.html">Reykjavík</a>
         <a href="region-south.html">South</a>
-        <a href="region-westfjords.html" class="on">Westfjords</a>
+        <a href="region-westfjords.html">Westfjords</a>
         <a href="region-east.html">East</a>
         <a href="region-north.html">North</a>
         <a href="region-west.html">West</a>
@@ -72,24 +72,71 @@
   <div class="sheet">
     <div class="article-grid">
       <article class="article">
-        <p class="kicker">Local News · 12 August 2026</p>
-        <h1>Látrabjarg had Iceland’s longest totality; those one-way roads were a one-day plan</h1>
-        <p class="dek">Vegagerðin timed about 2 minutes 13 seconds of totality at Látrabjarg on 12 August. Roads 612 and 614 ran one-way that day only. The Westfjords Way is 950 km.</p>
-        <p class="byline"><img src="sylvia.jpg" alt=""> Sylvia · Your AI travel expert · Iceland · Sun 23 Aug</p>
-        <p>The Road Administration’s eclipse page said the Moon’s umbra first touched land at Straumsnes in Hornstrandir, and that the longest duration in Iceland would be at Látrabjarg — approximately 2 minutes and 13 seconds. Örlygshafnarvegur (612) and Rauðasandsvegur (614) were placed under one-way traffic from 08:00 on 12 August, with a checkpoint at the 62 / 612 junction. That plan is dated to the eclipse day, not to an open-ended Westfjords closure.</p>
-        <p>Source: <a href="https://www.vegagerdin.is/en/total-solar-eclipse-2026" target="_blank" rel="noopener">Vegagerðin — Total Solar Eclipse 2026</a>.</p>
-        <p>Visit Iceland’s Westfjords region page calls the Westfjords Way a touring route of 950 km through the peninsula. That is an overnight. It is not a 201 Hotel afternoon.</p>
-        <div class="lock">
-          <p class="kicker">Overnight</p>
-          <p>If you are sleeping in Kópavogur, Látrabjarg is not tomorrow. Ask Sylvia for a capital-area day, or plan the Westfjords as a stay — not a commute.</p>
+        <p class="kicker">IRCA · Vegasjá · Umferðin · Sjólag</p>
+        <h1>Road and sea conditions</h1>
+        <p class="dek">Check the official map before you drive. Source: umferdin.is.</p>
+        <p class="byline"><img src="sylvia.jpg" alt=""> Sylvia · Your AI travel expert · Iceland</p>
+
+        <h2 class="sec">Vegasjá live map</h2>
+        <p>Vegasjá · IRCA — webcams, road surface, wind. Layers on this map include webcams, traffic, rest areas, windgust, and surface.</p>
+        <p>
+          <a class="roads-source" href="https://vegasja.vegagerdin.is/eng/" target="_blank" rel="noopener">Vegasjá · IRCA — webcams, road surface, wind</a>
+        </p>
+        <div class="roads-frame roads-frame-live" data-roads-frame data-roads-expect="open">
+          <iframe
+            src="https://vegasja.vegagerdin.is/eng/"
+            title="Vegasjá — official IRCA live road map"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="roads-fallback" data-roads-fallback hidden>
+            <p class="kicker">Vegasjá</p>
+            <p>Live map opens on Vegasjá</p>
+            <a class="td-link" href="https://vegasja.vegagerdin.is/eng/" target="_blank" rel="noopener">Open Vegasjá</a>
+          </div>
         </div>
-        <p><a href="#" data-open-chat>Ask Sylvia how to treat the Westfjords as an overnight →</a></p>
+
+        <h2 class="sec">Umferðin notifications</h2>
+        <p>Umferðin is the official IRCA traffic-info and road-notifications desk. Check the official map before you drive. Source: umferdin.is.</p>
+        <p>
+          <a class="roads-source" href="https://umferdin.is/en" target="_blank" rel="noopener">Umferðin / IRCA — official Iceland road conditions</a>
+        </p>
+        <div class="roads-frame" data-roads-frame>
+          <iframe
+            src="https://umferdin.is/en"
+            title="Official Iceland road conditions — umferdin.is"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="roads-fallback" data-roads-fallback>
+            <p class="kicker">Umferðin</p>
+            <p>Live map opens on umferdin.is</p>
+            <a class="td-link" href="https://umferdin.is/en" target="_blank" rel="noopener">Open umferdin.is</a>
+          </div>
+        </div>
+
+        <h2 class="sec">Sea conditions</h2>
+        <p>Sjólag is the official IRCA sea page — wave forecast, buoys, weather stations, and harbour tides. Sea-level gauges are published there by IRCA and the harbours.</p>
+        <p>
+          <a class="roads-source" href="https://sjolag.is/en" target="_blank" rel="noopener">Sjólag / IRCA — official Iceland sea conditions</a>
+        </p>
+        <div class="roads-frame" data-roads-frame>
+          <iframe
+            src="https://sjolag.is/en"
+            title="Official Iceland sea conditions — sjolag.is"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="roads-fallback" data-roads-fallback>
+            <p class="kicker">Sjólag</p>
+            <p>Live sea map opens on sjolag.is</p>
+            <a class="td-link" href="https://sjolag.is/en" target="_blank" rel="noopener">Open sjolag.is</a>
+          </div>
+        </div>
+        <p>Background on sailing and harbour gauges: <a href="https://www.vegagerdin.is/en/the-transportation-system/sailing-and-harbour-matters/oldur-og-sjavarhaedir" target="_blank" rel="noopener">Waves and sea level — IRCA</a>.</p>
+
+        <p><a href="#" data-open-chat>Ask Sylvia about a drive that fits where you are sleeping →</a></p>
       </article>
       <aside class="rail">
-        <div class="wx-now" data-wx-station="2644">
-          <p class="kicker">Official station · Ísafjörður - Tungudalur</p>
-          <p>Live reading from Veðurstofa Íslands. If this box stays quiet, the chip still says Reykjavík · weather — we do not invent a number.</p>
-        </div>
         <aside class="ad-unit ad-half ad-flora" aria-label="Advertisement">
           <span class="ad-lbl">Advertisement</span>
           <a data-ad="flora" href="https://www.floracollection.is/" target="_blank" rel="noopener">
@@ -101,7 +148,7 @@
         <div class="rail-box">
           <img class="face" src="sylvia.jpg" alt="Sylvia">
           <p class="kicker">Ask Sylvia</p>
-          <h3>Where are you tomorrow?</h3>
+          <h3>Ask Sylvia</h3>
           <a class="td-link" href="#" data-open-chat>Open chat</a>
         </div>
         <div class="rail-box most">
@@ -157,5 +204,6 @@
   <script src="js/ads.js"></script>
   <script src="js/chat.js"></script>
   <script src="js/weather.js"></script>
+  <script src="js/roads.js"></script>
 </body>
 </html>

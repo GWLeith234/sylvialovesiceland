@@ -7,6 +7,7 @@
 :root {
   /* Village blue #1665a8 retired from this mockup — Northern Lights tokens only */
   --night: #061820;
+  --polar-teal: #0a3d38;
   --aurora: #1db584;
   --aurora-deep: #127a5b;
   --aurora-violet: #2a1f4a;
@@ -180,7 +181,9 @@ button { font: inherit; cursor: pointer; }
   font-size: 16px;
 }
 a.hd-wx,
-.hd-wx {
+.hd-wx,
+a.hd-roads,
+.hd-roads {
   font-size: 12px;
   color: var(--muted);
   white-space: nowrap;
@@ -188,7 +191,8 @@ a.hd-wx,
   letter-spacing: 0;
   text-transform: none;
 }
-a.hd-wx:hover { color: var(--aurora-hover); }
+a.hd-wx:hover,
+a.hd-roads:hover { color: var(--aurora-hover); }
 .heart { color: var(--yellow); font-size: 16px; }
 .wx-now {
   border: 1px solid var(--line);
@@ -640,6 +644,74 @@ h3 { font-size: 16.4px; line-height: 1.25; }
   margin: 16px 0;
 }
 .lock p { margin: 0; font-size: 14px; }
+.roads-mod,
+.events-mod,
+.info-mod {
+  border: 1px solid var(--line);
+  background: #eef8f4;
+  padding: 12px 14px;
+  margin-top: 12px;
+}
+.roads-mod h3,
+.events-mod h3,
+.info-mod h3 { font-size: 16.4px; margin: 0 0 4px; }
+.roads-mod p,
+.events-mod p,
+.info-mod p { margin: 0 0 6px; font-size: 14px; color: var(--muted); }
+.roads-mod p:last-child,
+.events-mod p:last-child,
+.info-mod p:last-child { margin-bottom: 0; }
+.roads-mod a,
+.events-mod a,
+.info-mod a { color: var(--aurora); font-weight: 700; }
+.events-mod .just { margin-top: 8px; }
+.roads-source { font-weight: 700; }
+.roads-frame {
+  position: relative;
+  background: var(--polar-teal);
+  border: 1px solid var(--line);
+  min-height: 420px;
+  margin: 0 0 16px;
+}
+.roads-frame iframe {
+  display: block;
+  width: 100%;
+  height: 420px;
+  border: 0;
+  background: var(--night);
+}
+.roads-frame-live {
+  min-height: 680px;
+}
+.roads-frame-live iframe {
+  height: 680px;
+}
+.roads-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  background: rgba(6, 24, 32, 0.92);
+  color: #fff;
+}
+.roads-fallback[hidden] { display: none; }
+.roads-fallback .kicker { color: #c8f0e4; }
+.roads-fallback p { margin: 0 0 12px; color: #fff; }
+.roads-fallback .td-link { margin-top: 4px; }
+.cal-month { margin: 0 0 22px; }
+.cal-month .sec { margin-bottom: 8px; }
+.cal-item {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.cal-item h3 { font-size: 16.4px; margin: 0 0 4px; }
+.cal-item .when { font-weight: 700; color: var(--ink); margin: 0 0 4px; font-size: 14px; }
+.cal-item p { margin: 0 0 6px; font-size: 14px; }
+.cal-item .src { font-size: 12px; }
 .rail { display: flex; flex-direction: column; gap: 16px; }
 .rail-box {
   border: 1px solid var(--line);
@@ -789,6 +861,8 @@ h3 { font-size: 16.4px; line-height: 1.25; }
 }
 .site-ft strong { font-size: 15px; }
 .site-ft p { margin: 4px 0 0; color: #ddd; }
+.site-ft .ft-info a { color: #c8f0e4; }
+.site-ft .ft-info a:hover { color: #fff; }
 .site-ft .pay { display: flex; flex-direction: column; gap: 6px; }
 .site-ft .pay span { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #9a9590; }
 .site-ft .pay img { display: block; height: 28px; width: auto; max-width: 100%; background: #fff; padding: 4px 6px; }
