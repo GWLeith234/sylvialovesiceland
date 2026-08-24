@@ -506,6 +506,142 @@ h3 { font-size: 16.4px; line-height: 1.25; }
 .book-adj { flex: 0 0 auto; align-self: center; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--aurora); border-bottom: 1px solid var(--aurora); }
 .book-adj:hover { color: var(--aurora-hover); border-color: var(--aurora-hover); }
 .article a.book-adj { font-weight: 800; }
+.says {
+  margin: -2px 0 12px;
+  padding: 0 0 10px 12px;
+  border-left: 3px solid var(--aurora);
+  color: var(--muted);
+}
+.says .says-lbl {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--aurora);
+  margin: 0 0 4px;
+  font-style: normal;
+}
+.says p { margin: 0; font-size: 13px; font-style: italic; line-height: 1.45; color: var(--ink); }
+.says cite {
+  display: block;
+  margin-top: 4px;
+  font-style: normal;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.zone-banner {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  margin: 0 0 18px;
+  background: var(--night);
+}
+.zone-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.zone-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(6, 24, 32, .72), rgba(6, 24, 32, .22));
+}
+.zone-banner .zb-copy {
+  position: absolute;
+  left: 22px;
+  bottom: 18px;
+  z-index: 1;
+  color: #fff;
+}
+.zone-banner .kicker { color: #c8f0e4; }
+.zone-banner h1 { color: #fff; margin: 0; font-size: 30px; line-height: 1.15; }
+.iceland-map {
+  margin: 0 0 10px;
+}
+.iceland-map svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #eef8f4;
+  border: 1px solid var(--line);
+}
+.iceland-map .z {
+  fill: #cfe8de;
+  stroke: #127a5b;
+  stroke-width: 1.2;
+  cursor: pointer;
+}
+.iceland-map .z:hover,
+.iceland-map .z:focus {
+  fill: #1db584;
+  outline: none;
+}
+.iceland-map .pin {
+  fill: #a30b37;
+  stroke: #fff;
+  stroke-width: 1.5;
+}
+.iceland-map .pin-label {
+  fill: #061820;
+  font-size: 9px;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+.map-tip {
+  min-height: 2.6em;
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.map-tip span { display: none; }
+.map-tip .tip-default { display: inline; }
+.iceland-map:has(.z-reykjavik:hover) .tip-reykjavik,
+.iceland-map:has(.z-south:hover) .tip-south,
+.iceland-map:has(.z-westfjords:hover) .tip-westfjords,
+.iceland-map:has(.z-east:hover) .tip-east,
+.iceland-map:has(.z-north:hover) .tip-north,
+.iceland-map:has(.z-west:hover) .tip-west,
+.iceland-map:has(.z-reykjanes:hover) .tip-reykjanes { display: inline; }
+.iceland-map:has(.z-reykjavik:hover) .tip-default,
+.iceland-map:has(.z-south:hover) .tip-default,
+.iceland-map:has(.z-westfjords:hover) .tip-default,
+.iceland-map:has(.z-east:hover) .tip-default,
+.iceland-map:has(.z-north:hover) .tip-default,
+.iceland-map:has(.z-west:hover) .tip-default,
+.iceland-map:has(.z-reykjanes:hover) .tip-default { display: none; }
+.zone-cards { display: none; }
+.zone-cards a {
+  display: block;
+  position: relative;
+  color: #fff;
+  min-height: 88px;
+  overflow: hidden;
+}
+.zone-cards img {
+  width: 100%;
+  height: 88px;
+  object-fit: cover;
+  display: block;
+}
+.zone-cards span {
+  position: absolute;
+  left: 10px;
+  bottom: 8px;
+  z-index: 1;
+  font-size: 13px;
+  font-weight: 800;
+}
+.zone-cards a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(6, 24, 32, .7), transparent);
+}
 .lock {
   border-left: 4px solid var(--aurora);
   background: #eef8f4;
@@ -794,4 +930,6 @@ h3 { font-size: 16.4px; line-height: 1.25; }
   .tour { grid-template-columns: 1fr; padding-bottom: 12px; }
   .tour img { width: 100%; height: 140px; }
   .nl { flex-direction: column; align-items: flex-start; }
+  .zone-banner { height: 220px; }
+  .zone-cards { display: grid; gap: 8px; margin: 10px 0 0; }
 }
