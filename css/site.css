@@ -285,9 +285,9 @@ a.hd-roads:hover { color: var(--aurora-hover); }
   background-image: url("../img/flora-lobby.jpg");
 }
 .takeover-flora201 .takeover-bg {
-  background-image: url("../img/flora-reception.jpg");
+  background-image: url("../img/hotel201-ad-hero.jpg");
 }
-.takeover-nordurflug .takeover-bg { background-image: url("../img/heli-hero.jpg"); background-color:#061820; }
+.takeover-nordurflug .takeover-bg { background-image: url("../img/heli-ad-hero.jpg"); background-color:#061820; }
 .takeover-evx { background:#040404; }
 .takeover-evx .takeover-bg { background-image: url("../img/evx-ad-hero.jpg"); background-color:#040404; }
 .takeover-hit {
@@ -806,6 +806,8 @@ h3 { font-size: 16.4px; line-height: 1.25; }
   box-shadow: 0 2px 10px rgba(0,0,0,.35);
 }
 .ad-flora201 .ad-lockup { width: 56px !important; height: 56px !important; }
+.ad-baked .ad-copy { display: none !important; }
+.ad-baked .ad-lockup { display: none !important; }
 .ad-lb-slot {
   position: relative;
   z-index: 3;

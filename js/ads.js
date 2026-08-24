@@ -2,27 +2,28 @@
   var TICK_KEY = "sli_ad_tick";
   var FLORA_URL = "https://www.floracollection.is/";
   var FLORA201_URL = "https://201hotel.is/";
+  var FLORA201_BOOK = "https://201hotel.tourdesk.is/Tour";
   var HELI_URL = "https://www.helicopter.is/";
+  var HELI_BOOK = "https://201hotel.tourdesk.is/Tour/Item/1391/1/reykjavik-summit-helicopter-tour";
   var EVX_URL = "https://www.evolvex360.com/";
 
-  var HELI_COPY = {
-    takeover: "Experience the breathtaking beauty of Iceland from above with Norðurflug Helicopter Service.",
-    wide: "Book your volcano experience",
-    half: "Start unique tours with us",
-    box: "Reykjavik Summit"
-  };
   var EVX_COPY = {
     takeover: "Our AI workforce avatars. Get them working for your business today.",
     wide: "They speak 40 languages, and never take a minute off.",
     half: "Our AI workforce avatars. Get them working for your business today.",
     box: "They speak 40 languages, and never take a minute off."
   };
+  var HOTEL201_IMG = {
+    takeover: "img/hotel201-ad-hero.jpg",
+    wide: "img/hotel201-ad-wide.jpg",
+    half: "img/hotel201-ad-half.jpg",
+    box: "img/hotel201-ad-box.jpg"
+  };
   var HELI_IMG = {
-    takeover: "img/heli-hero.jpg",
-    wide: "img/heli-reykjavik.jpg",
-    half: "img/heli-helicopter.jpg",
-    box: "img/heli-summit.jpg",
-    logo: "img/heli-logo.png"
+    takeover: "img/heli-ad-hero.jpg",
+    wide: "img/heli-ad-wide.jpg",
+    half: "img/heli-ad-half.jpg",
+    box: "img/heli-ad-box.jpg"
   };
   var EVX_IMG = {
     takeover: "img/evx-ad-hero.jpg",
@@ -160,11 +161,33 @@
     }
   }
 
+  function applyMeta(el, ad) {
+    var line = ad.line || ad.copy || ad.mark || ad.brand || "";
+    applyLink(el, ad.href, ad.kind, line, !!(ad.baked || ad.hideCopy));
+    if (ad.book) el.setAttribute("data-book", ad.book);
+    else el.removeAttribute("data-book");
+    var unit = el.closest(".ad-unit");
+    if (unit) {
+      if (ad.baked) unit.classList.add("ad-baked");
+      else unit.classList.remove("ad-baked");
+    }
+    if (ad.baked) {
+      el.setAttribute("data-baked", "true");
+      var copy = el.querySelector(".ad-copy");
+      if (copy) {
+        copy.style.display = "none";
+        copy.textContent = "";
+      }
+    } else {
+      el.removeAttribute("data-baked");
+    }
+  }
+
   function paint(el, creative, marksOrig) {
     var isHit = el.classList.contains("takeover-hit");
     var src = isHit ? creative.bg : creative.img;
     probe(src, function () {
-      applyLink(el, creative.href, creative.kind, creative.line, creative.hideCopy);
+      applyMeta(el, creative);
       if (!isHit) applyImages(el, creative.img, creative.logo, creative.brand);
       if (isHit) {
         setTakeoverClass(creative.kind);
@@ -174,16 +197,32 @@
     });
   }
 
-  function floraCreative(orig, marksOrig) {
-    var kind = orig.kind === "flora201" ? "flora201" : "flora";
+  function flora201Creative(shape, marksOrig) {
     return {
-      kind: kind,
-      href: kind === "flora201" ? FLORA201_URL : FLORA_URL,
+      kind: "flora201",
+      href: FLORA201_URL,
+      book: FLORA201_BOOK,
+      img: HOTEL201_IMG[shape] || HOTEL201_IMG.wide,
+      copy: "",
+      baked: true,
+      logo: "",
+      brand: "201 Hotel",
+      line: "201 Hotel",
+      bg: HOTEL201_IMG.takeover,
+      marks: marksOrig
+    };
+  }
+
+  function floraCreative(orig, marksOrig, shape) {
+    if (orig.kind === "flora201") return flora201Creative(shape, marksOrig);
+    return {
+      kind: "flora",
+      href: FLORA_URL,
       line: orig.line,
       img: orig.img,
       logo: orig.logo,
-      brand: orig.brand || (kind === "flora201" ? "201 Hotel" : "Flóra Hotels"),
-      bg: kind === "flora201" ? "img/flora-reception.jpg" : "img/flora-lobby.jpg",
+      brand: orig.brand || "Flóra Hotels",
+      bg: "img/flora-lobby.jpg",
       marks: marksOrig
     };
   }
@@ -192,12 +231,16 @@
     return {
       kind: "nordurflug",
       href: HELI_URL,
-      line: HELI_COPY[shape] || HELI_COPY.wide,
+      book: HELI_BOOK,
       img: HELI_IMG[shape] || HELI_IMG.wide,
-      logo: HELI_IMG.logo,
+      copy: "",
+      baked: true,
+      logo: "",
       brand: "Norðurflug",
+      line: "Visit helicopter.is",
+      mark: "Visit helicopter.is",
       bg: HELI_IMG.takeover,
-      marks: markPair("Book your volcano experience", "Start unique tours with us")
+      marks: markPair("Visit helicopter.is", "Norðurflug")
     };
   }
 
@@ -228,11 +271,12 @@
     for (var i = 0; i < slots.length; i++) {
       var el = slots[i];
       var orig = snapshot(el);
+      var shape = shapeOf(el);
       var who = (n + i) % 3;
       var creative;
-      if (who === 0) creative = floraCreative(orig, marksOrig);
-      else if (who === 1) creative = heliCreative(shapeOf(el));
-      else creative = evxCreative(shapeOf(el));
+      if (who === 0) creative = floraCreative(orig, marksOrig, shape);
+      else if (who === 1) creative = heliCreative(shape);
+      else creative = evxCreative(shape);
       paint(el, creative, marksOrig);
     }
   }
