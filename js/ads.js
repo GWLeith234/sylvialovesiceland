@@ -124,7 +124,7 @@
     b.classList.add("takeover-" + kind);
   }
 
-  function applyLink(el, href, kind, line) {
+  function applyLink(el, href, kind, line, hideCopy) {
     el.setAttribute("href", href);
     el.setAttribute("target", "_blank");
     el.setAttribute("rel", "noopener");
@@ -136,7 +136,14 @@
       unit.classList.add("ad-" + kind);
     }
     var copy = el.querySelector(".ad-copy");
-    if (copy) copy.textContent = line;
+    if (copy) {
+      if (hideCopy) {
+        copy.style.display = "none";
+      } else {
+        copy.style.display = "";
+        copy.textContent = line;
+      }
+    }
   }
 
   function applyImages(el, imgSrc, logoSrc, brand) {
@@ -157,7 +164,7 @@
     var isHit = el.classList.contains("takeover-hit");
     var src = isHit ? creative.bg : creative.img;
     probe(src, function () {
-      applyLink(el, creative.href, creative.kind, creative.line);
+      applyLink(el, creative.href, creative.kind, creative.line, creative.hideCopy);
       if (!isHit) applyImages(el, creative.img, creative.logo, creative.brand);
       if (isHit) {
         setTakeoverClass(creative.kind);
@@ -202,6 +209,7 @@
       line: EVX_COPY[shape] || EVX_COPY.wide,
       img: EVX_IMG[shape] || EVX_IMG.wide,
       logo: small ? "" : EVX_IMG.logo,
+      hideCopy: small,
       brand: "EvolveX360 Iceland",
       bg: EVX_IMG.takeover,
       marks: markPair("ICELAND → NORTH AMERICA", "Your next customer lives in New York. Or Toronto.")
