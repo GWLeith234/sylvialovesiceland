@@ -83,6 +83,9 @@
 }
 
 .sg-wordmark-sample {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin: 0;
   color: #061820;
   font-family: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
@@ -91,12 +94,23 @@
   letter-spacing: 0.04em;
   line-height: 1;
 }
+.sg-wordmark-sample small {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #127a5b;
+  line-height: 1.3;
+  margin-top: 4px;
+}
 
 .sg-wordmark-on-night {
   background: #061820 url("../img/aurora-masthead.jpg") center / cover no-repeat;
   color: #fff;
   padding: 22px 16px;
 }
+.sg-wordmark-on-night small { color: #d8fff3; }
 
 .sg-ui-sample {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
@@ -155,13 +169,26 @@
   height: 92px;
   background: #061820 url("../img/aurora-masthead.jpg") center / cover no-repeat;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   padding: 0 16px;
   color: #fff;
   font-family: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
   font-weight: 400;
   font-size: 32px;
   letter-spacing: 0.04em;
+  line-height: 1;
+}
+.sg-bar-sample small {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #d8fff3;
+  line-height: 1.3;
+  margin-top: 4px;
 }
 
 .sg-dont {
