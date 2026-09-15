@@ -51,12 +51,21 @@
   }
 
   function ensureCss() {
-    if (document.querySelector('link[data-st-alert-css]')) return;
-    var link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = "css/safetravel-alert.css";
-    link.setAttribute("data-st-alert-css", "1");
-    document.head.appendChild(link);
+    return new Promise(function (resolve) {
+      var existing = document.querySelector('link[data-st-alert-css]');
+      if (existing) {
+        if (existing.sheet) resolve();
+        else { existing.addEventListener("load", function () { resolve(); }); existing.addEventListener("error", function () { resolve(); }); }
+        return;
+      }
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "css/safetravel-alert.css";
+      link.setAttribute("data-st-alert-css", "1");
+      link.addEventListener("load", function () { resolve(); });
+      link.addEventListener("error", function () { resolve(); });
+      document.head.appendChild(link);
+    });
   }
 
   function removeSlot() {
@@ -67,7 +76,6 @@
   }
 
   function mount(alerts) {
-    ensureCss();
     removeSlot();
     if (!alerts || !alerts.length) return;
 
@@ -98,13 +106,7 @@
 
     hd.parentNode.insertBefore(slot, hd);
     document.body.classList.add("has-st-alerts");
-    var h = Math.ceil(slot.getBoundingClientRect().height);
-    document.documentElement.style.setProperty("--st-alert-h", h + "px");
-    // remeasure after fonts/layout
-    requestAnimationFrame(function () {
-      var h2 = Math.ceil(slot.getBoundingClientRect().height);
-      document.documentElement.style.setProperty("--st-alert-h", h2 + "px");
-    });
+    document.documentElement.style.setProperty("--st-alert-h", Math.ceil(slot.offsetHeight) + "px");
   }
 
   function fetchJson(url) {
@@ -115,26 +117,28 @@
   }
 
   function run() {
-    fetchJson(CPT)
-      .then(function (data) {
-        var alerts = normalizeFromCpt(data);
-        if (alerts.length) {
-          mount(alerts);
-          return;
-        }
-        return fetchJson(CACHE).then(function (cache) {
-          mount(normalizeFromCache(cache));
-        });
-      })
-      .catch(function () {
-        return fetchJson(CACHE)
-          .then(function (cache) {
+    ensureCss().then(function () {
+      fetchJson(CPT)
+        .then(function (data) {
+          var alerts = normalizeFromCpt(data);
+          if (alerts.length) {
+            mount(alerts);
+            return;
+          }
+          return fetchJson(CACHE).then(function (cache) {
             mount(normalizeFromCache(cache));
-          })
-          .catch(function () {
-            removeSlot();
           });
-      });
+        })
+        .catch(function () {
+          return fetchJson(CACHE)
+            .then(function (cache) {
+              mount(normalizeFromCache(cache));
+            })
+            .catch(function () {
+              removeSlot();
+            });
+        });
+    });
   }
 
   if (document.readyState === "loading") {
