@@ -1,0 +1,53 @@
+{
+  "sourcePrimary": "https://safetravel.is/wp-json/wp/v2/alert",
+  "sourceBackup": "https://safetravel.is/feed/",
+  "sourceUsed": "cpt",
+  "attribution": "Safetravel / ICE-SAR",
+  "fetchedAt": "2026-09-15T14:34:46Z",
+  "note": "Live fallback cache for IcelandNOW SafeTravel chip. CPT is primary. Weather (Vedurstofa) stays separate.",
+  "count": 2,
+  "alerts": [
+    {
+      "id": 6419,
+      "title": "September, 2026: Fimmvörðuháls hiking trail.",
+      "permalink": "https://safetravel.is/alert/august-2026-fimmvorduhals-hiking-trail/",
+      "published": "2026-08-24T15:37:45Z",
+      "modified": "2026-09-08T22:43:09Z",
+      "excerpt": "Dangerous conditions at Fimmvörðuháls trail making part of the trail very challenging. People are advised not to hike the trail while the conditions are this way.",
+      "lastSeen": "2026-09-15T14:34:46Z",
+      "hash": "c64fb0a31737f11e",
+      "alertLabel": "red",
+      "source": "cpt"
+    },
+    {
+      "id": 6351,
+      "title": "Alternative emergency number due to the 2G/3G shutdown",
+      "permalink": "https://safetravel.is/alert/alternative-emergency-number-due-to-the-g2-g3-shutdown/",
+      "published": "2026-08-10T15:31:54Z",
+      "modified": "2026-08-10T20:29:53Z",
+      "excerpt": "If you are unable to connect to 112, or if the call has poor audio quality or gets disconnected, you can call 599-0112. Save this number as a backup. See further information here: 112.is",
+      "lastSeen": "2026-09-15T14:34:46Z",
+      "hash": "db3e697d4eabef91",
+      "alertLabel": "red",
+      "source": "cpt"
+    }
+  ],
+  "rssStatus": {
+    "http": 200,
+    "reachable": true,
+    "updatePeriod": "hourly",
+    "updateFrequency": 1,
+    "lastBuildDate": "Tue, 08 Sep 2026 22:43:09 +0000",
+    "itemCount": 0,
+    "note": "RSS channel reachable with hourly updatePeriod but zero <item> entries. CPT remains primary."
+  },
+  "schemaFieldsUsed": [
+    "id",
+    "title.rendered",
+    "link",
+    "date / date_gmt (published)",
+    "modified / modified_gmt",
+    "excerpt.rendered (HTML stripped, wording verbatim)"
+  ],
+  "liveFallback": true
+}

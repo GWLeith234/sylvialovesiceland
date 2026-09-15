@@ -143,4 +143,13 @@
       window.SLI.openChat();
     }
   });
+
+  /* SafeTravel / ICE-SAR alert chip (George YES 2026-09-15) */
+  (function loadSafeTravelAlerts() {
+    if (document.querySelector("script[data-st-alerts]")) return;
+    var s = document.createElement("script");
+    s.src = "js/safetravel-alerts.js";
+    s.setAttribute("data-st-alerts", "1");
+    document.head.appendChild(s);
+  })();
 })();
