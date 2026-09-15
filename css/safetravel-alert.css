@@ -1,9 +1,14 @@
 /* SafeTravel alert chip for IcelandNOW
    Uses existing --crimson (#a30b37) from site.css
-   Mount: .slot-alert at very top (before sticky header)
+   Mount: .slot-alert pinned at very top (above fixed .site-hd)
    Hide entire .slot-alert when zero alerts. */
 
 .slot-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
   width: 100%;
   background: var(--crimson, #a30b37);
   color: #fff;
@@ -12,6 +17,23 @@
 
 .slot-alert[hidden] {
   display: none !important;
+}
+
+body.has-st-alerts {
+  padding-top: calc(var(--hd) + var(--st-alert-h, 0px)) !important;
+}
+
+body.has-st-alerts .site-hd {
+  top: var(--st-alert-h, 0px);
+}
+
+body.has-st-alerts .takeover-bg,
+body.has-st-alerts .takeover-hit {
+  top: calc(var(--hd) + var(--st-alert-h, 0px));
+}
+
+body.has-st-alerts .takeover-mark {
+  top: calc(var(--hd) + var(--st-alert-h, 0px) + 28%);
 }
 
 .st-alert-chip {

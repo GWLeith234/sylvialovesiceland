@@ -62,6 +62,8 @@
   function removeSlot() {
     var old = document.querySelector(".slot-alert");
     if (old) old.parentNode.removeChild(old);
+    document.body.classList.remove("has-st-alerts");
+    document.documentElement.style.removeProperty("--st-alert-h");
   }
 
   function mount(alerts) {
@@ -95,6 +97,14 @@
     });
 
     hd.parentNode.insertBefore(slot, hd);
+    document.body.classList.add("has-st-alerts");
+    var h = Math.ceil(slot.getBoundingClientRect().height);
+    document.documentElement.style.setProperty("--st-alert-h", h + "px");
+    // remeasure after fonts/layout
+    requestAnimationFrame(function () {
+      var h2 = Math.ceil(slot.getBoundingClientRect().height);
+      document.documentElement.style.setProperty("--st-alert-h", h2 + "px");
+    });
   }
 
   function fetchJson(url) {
