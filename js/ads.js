@@ -112,10 +112,7 @@
   }
 
   function markPair(title, sub) {
-    return {
-      l: title + "<small>" + sub + "</small>",
-      r: title + "<small>Advertisement</small>"
-    };
+    return { l: "Advertisement", r: "Advertisement" };
   }
 
   function setTakeoverClass(kind) {
@@ -209,7 +206,7 @@
       brand: "201 Hotel",
       line: "201 Hotel",
       bg: HOTEL201_IMG.takeover,
-      marks: marksOrig
+      marks: markPair()
     };
   }
 
@@ -223,7 +220,7 @@
       logo: orig.logo,
       brand: orig.brand || "Flóra Hotels",
       bg: "img/flora-lobby.jpg",
-      marks: marksOrig
+      marks: markPair()
     };
   }
 
@@ -252,7 +249,7 @@
       line: EVX_COPY[shape] || EVX_COPY.wide,
       img: EVX_IMG[shape] || EVX_IMG.wide,
       logo: small ? "" : EVX_IMG.logo,
-      hideCopy: small,
+      hideCopy: shape === "half",
       brand: "EvolveX360 Iceland",
       bg: EVX_IMG.takeover,
       marks: markPair("Our AI workforce avatars.", "Get them working for your business today.")
