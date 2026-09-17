@@ -33,6 +33,13 @@ assert.ok(src.indexOf("eyja") === -1 && src.indexOf("scooter") === -1, "no Eyja 
 has(css, 'url("../img/hotel201-ad-hero.jpg")');
 has(css, 'url("../img/heli-ad-hero.jpg")');
 has(css, ".ad-baked .ad-copy");
+has(css, "background: #f5f5f5");
+has(css, 'content: "Advertisement"');
+has(css, 'content: "Sponsored"');
+has(css, 'content: "Ask Sylvia"');
+has(css, 'content: "Partner"');
+has(src, 'l: "Advertisement"');
+assert.ok(src.indexOf("hideCopy: shape === \"half\"") !== -1, "EVX box copy should show");
 
 has(src, "img/flora-lobby.jpg");
 has(src, "img/evx-ad-wide.jpg");
