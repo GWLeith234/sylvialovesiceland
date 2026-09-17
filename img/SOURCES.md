@@ -17,6 +17,13 @@ Zone banners used on the seven Visit Iceland region pages and the home map cards
 
 The home map SVG is an original drawing for IcelandNOW. It is not Visit Iceland artwork.
 
+## September 2026 content freshen (reuse, not new festival stills)
+
+- RIFF hero / Latest Story (`article-riff.html`, `index.html`) reuses `reykjavik-from-hallgrimskirkja.jpg`. Alt names the city, not a RIFF frame. No copyrighted festival stills invented.
+- Fimmvörðuháls hero (`article-fimmvorduhals.html`) reuses `waterfall-skogafoss.jpg` (`banner-south.jpg` twin). Alt and caption say Skógafoss / Skógar trailhead, not the highland path.
+- Reykjanes, South, North, Culture Night archive keep existing region photos (`blue-lagoon.jpg`, `waterfall-skogafoss.jpg`, `north-highlands.jpg`).
+- Imagine / new stock not required for this pack. If a later pass wants a dedicated Fimmvörðuháls ridge or Háskólabíó exterior, prefer public-domain / Commons over festival publicity stills.
+
 ## Official operator photo
 
 - `blue-lagoon.jpg` — aerial of the Blue Lagoon on the Reykjanes Peninsula (milky-blue water, lava field, steam). Downloaded from Blue Lagoon’s Contentful CDN (`DJI_0348__6_.jpg`) and resized to 2000px wide. Credit: Blue Lagoon.
