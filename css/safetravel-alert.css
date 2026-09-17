@@ -1,4 +1,4 @@
-/* SafeTravel compact alert bar for IcelandNOW
+/* SafeTravel compact alert bar for Iceland365
    Crimson safety cue (--crimson / #a30b37), news-ticker not billboard.
    Mount: .slot-alert pinned at very top (above fixed .site-hd)
    Hide entire .slot-alert when zero alerts or user-dismissed. */

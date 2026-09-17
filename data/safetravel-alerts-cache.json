@@ -4,7 +4,7 @@
   "sourceUsed": "cpt",
   "attribution": "Safetravel / ICE-SAR",
   "fetchedAt": "2026-09-15T14:34:46Z",
-  "note": "Live fallback cache for IcelandNOW SafeTravel chip. CPT is primary. Weather (Vedurstofa) stays separate.",
+  "note": "Live fallback cache for Iceland365 SafeTravel chip. CPT is primary. Weather (Vedurstofa) stays separate.",
   "count": 2,
   "alerts": [
     {

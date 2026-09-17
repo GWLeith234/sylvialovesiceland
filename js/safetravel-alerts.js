@@ -1,4 +1,4 @@
-/*! SafeTravel / ICE-SAR compact alert bar for IcelandNOW.
+/*! SafeTravel / ICE-SAR compact alert bar for Iceland365.
  * CPT primary: https://safetravel.is/wp-json/wp/v2/alert
  * Fallback: data/safetravel-alerts-cache.json
  * Attribution + official link-out mandatory. Never invent or soften.
