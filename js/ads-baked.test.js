@@ -38,6 +38,11 @@ has(css, 'content: "Advertisement"');
 has(css, 'content: "Sponsored"');
 has(css, 'content: "Ask Sylvia"');
 has(css, 'content: "Partner"');
+has(css, ".ad-infeed { margin: 16px auto; }");
+has(css, ".rail .ad-unit { margin: 0; }");
+has(css, ".ad-half, .ad-box { width: 100%; max-width: 300px; margin-left: auto; margin-right: auto; }");
+has(css, ".rail .ad-unit { margin-left: auto; margin-right: auto; }");
+has(css, "left: 0; right: 0; bottom: 0;");
 has(src, 'l: "Advertisement"');
 assert.ok(src.indexOf("hideCopy: shape === \"half\"") !== -1, "EVX box copy should show");
 
