@@ -1,0 +1,102 @@
+{
+  "viewport390": {
+    "width": 390,
+    "height": 844
+  },
+  "homeInfeed": {
+    "selector": ".ad-infeed",
+    "width": 300,
+    "height": 273,
+    "left": 45,
+    "right": 45,
+    "top": 286.71875,
+    "vw": 390,
+    "marginLeft": "0px",
+    "marginRight": "0px",
+    "position": "static",
+    "display": "block"
+  },
+  "homeFoot": {
+    "selector": ".ad-foot",
+    "width": 390,
+    "height": 112,
+    "left": 0,
+    "right": 0,
+    "top": 732,
+    "vw": 390,
+    "marginLeft": "0px",
+    "marginRight": "0px",
+    "position": "fixed",
+    "display": "block"
+  },
+  "articleHalf": {
+    "selector": ".article-grid .rail .ad-half",
+    "width": 300,
+    "height": 273,
+    "left": 45,
+    "right": 45,
+    "top": 477.546875,
+    "vw": 390,
+    "marginLeft": "30px",
+    "marginRight": "30px",
+    "position": "static",
+    "display": "block"
+  },
+  "articleBox": {
+    "selector": ".article-grid .rail .ad-box",
+    "width": 300,
+    "height": 273,
+    "left": 45,
+    "right": 45,
+    "top": 341.609375,
+    "vw": 390,
+    "marginLeft": "30px",
+    "marginRight": "30px",
+    "position": "static",
+    "display": "block"
+  },
+  "articleFoot": {
+    "selector": ".ad-foot",
+    "width": 390,
+    "height": 112,
+    "left": 0,
+    "right": 0,
+    "top": 732,
+    "vw": 390,
+    "marginLeft": "0px",
+    "marginRight": "0px",
+    "position": "fixed",
+    "display": "block"
+  },
+  "desktopRail": {
+    "selector": ".rail .ad-half",
+    "width": 300,
+    "height": 623,
+    "left": 780,
+    "right": 120,
+    "top": 496,
+    "vw": 1200,
+    "marginLeft": "0px",
+    "marginRight": "0px",
+    "position": "static",
+    "display": "block"
+  },
+  "desktopInfeed": {
+    "selector": ".ad-infeed",
+    "width": 300,
+    "height": 273,
+    "left": 120,
+    "right": 780,
+    "top": 1008.515625,
+    "vw": 1200,
+    "marginLeft": "0px",
+    "marginRight": "0px",
+    "position": "static",
+    "display": "block"
+  },
+  "files": [
+    "/workspace/refs/ads-mobile-center-2026-09-17/home-mid-scroll-390.png",
+    "/workspace/refs/ads-mobile-center-2026-09-17/article-mid-scroll-390.png",
+    "/workspace/refs/ads-mobile-center-2026-09-17/article-rail-box-390.png"
+  ]
+}
