@@ -1,4 +1,4 @@
-/* Northern Lights style-guide samples only.
+/* Iceland365 light lock style-guide samples (George 2026-09-18).
    Swatches and type specimens. Do not change site.css tokens from here. */
 
 .sg-lead {
@@ -52,15 +52,15 @@
   line-height: 1.4;
 }
 
-.sg-night { background: #061820; }
-.sg-polar { background: #0a3d38; }
-.sg-aurora { background: #002030; }
-.sg-aurora-deep { background: #001020; }
-.sg-hover { background: #003040; }
-.sg-violet { background: #2a1f4a; }
+.sg-night { background: #f6f8f6; }
+.sg-polar { background: #eef4f0; }
+.sg-aurora { background: #1F4D3A; }
+.sg-aurora-deep { background: #163528; }
+.sg-hover { background: #163828; }
+.sg-violet { background: #2a4a3d; }
 .sg-paper { background: #ffffff; }
-.sg-ink { background: #333333; }
-.sg-muted { background: #6f6f6f; }
+.sg-ink { background: #243028; }
+.sg-muted { background: #5c6b64; }
 .sg-yellow { background: #f2cd00; }
 .sg-flora { background: #062341; }
 
@@ -87,11 +87,11 @@
   flex-direction: column;
   align-items: flex-start;
   margin: 0;
-  color: #061820;
-  font-family: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
-  font-weight: 400;
-  font-size: 40px;
-  letter-spacing: 0.04em;
+  color: #163528;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 34px;
+  letter-spacing: 0;
   line-height: 1;
 }
 .sg-wordmark-sample small {
@@ -100,17 +100,17 @@
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #001020;
+  color: #5c6b64;
   line-height: 1.3;
   margin-top: 4px;
 }
 
 .sg-wordmark-on-night {
-  background: #061820 url("../img/aurora-masthead.jpg") center / cover no-repeat;
-  color: #fff;
+  background: #eef4f0;
+  color: #163528;
   padding: 22px 16px;
 }
-.sg-wordmark-on-night small { color: #d8fff3; }
+.sg-wordmark-on-night small { color: #5c6b64; }
 
 .sg-ui-sample {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
@@ -121,17 +121,17 @@
 }
 
 .sg-ui-head {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  font-weight: 700;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-weight: 600;
   font-size: 26px;
   line-height: 1.2;
-  color: #333333;
+  color: #243028;
   margin: 0 0 8px;
 }
 
 .sg-ui-sec {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  color: #002030;
+  color: #1F4D3A;
   font-size: 16.8px;
   font-weight: 800;
   text-transform: uppercase;
@@ -167,17 +167,18 @@
 
 .sg-bar-sample {
   height: 92px;
-  background: #061820 url("../img/aurora-masthead.jpg") center / cover no-repeat;
+  background: #ffffff;
+  border: 1px solid #dce6e0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   padding: 0 16px;
-  color: #fff;
-  font-family: "Bebas Neue", Impact, "Arial Narrow", sans-serif;
-  font-weight: 400;
+  color: #163528;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-weight: 600;
   font-size: 32px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0;
   line-height: 1;
 }
 .sg-bar-sample small {
@@ -186,7 +187,7 @@
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #d8fff3;
+  color: #5c6b64;
   line-height: 1.3;
   margin-top: 4px;
 }
