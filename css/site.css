@@ -975,7 +975,7 @@ a.tour:not(.muted)::before {
   object-fit: contain;
   background: #040404;
 }
-.ad-infeed { margin: 16px 0; }
+.ad-infeed { margin: 16px auto; }
 .rail .ad-unit { margin: 0; }
 .ad-skin-mobile { display: none; }
 .ad-foot {
@@ -1140,7 +1140,8 @@ a.tour:not(.muted)::before {
     padding: 4px 8px;
     background: rgba(0, 0, 0, .82);
   }
-  .ad-half, .ad-box { width: 100%; max-width: 300px; }
+  .ad-half, .ad-box { width: 100%; max-width: 300px; margin-left: auto; margin-right: auto; }
+  .rail .ad-unit { margin-left: auto; margin-right: auto; }
   .ad-half img:not(.ad-lockup), .ad-box img:not(.ad-lockup) { width: 100%; height: 250px; }
   .ad-foot { display: block; }
   body { padding-bottom: 124px; }
