@@ -1044,6 +1044,12 @@ a.tour:not(.muted)::before {
   flex-wrap: wrap;
 }
 .site-ft strong { font-size: 15px; font-family: var(--serif); font-weight: 600; }
+.site-ft strong a,
+.site-ft strong a:hover,
+.site-ft strong a:visited {
+  color: inherit;
+  text-decoration: none;
+}
 .site-ft p { margin: 4px 0 0; color: var(--muted); }
 .site-ft .ft-info a { color: var(--forest); }
 .site-ft .ft-info a:hover { color: var(--forest-hover); }
